@@ -1,201 +1,71 @@
-// Page header
-.front-hero {
-  .marketing {
-    @include xy-grid-container(55rem);
-    @include xy-grid;
-  }
+section {
+  min-height: 100vh;
+  border-bottom: 1px solid $white;
+}
 
-  @include breakpoint(small) {
-    background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
-    background-size: cover;
-    background-position: bottom;
-    padding: rem-calc(65%) 0;
-    margin: 0 0 rem-calc(32);
-    height: auto;
-    position: relative;
-    text-align: left;
-  }
-
-  @include breakpoint(medium) {
-    background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
-    background-size: cover;
-    background-position: center;
-    height: rem-calc(685);
-    margin: 0 0 rem-calc(72);
-  }
-
-  .watch {
-    @include breakpoint(small) {
-      @include xy-cell(7);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(12);
-    }
-
-    a {
-      color: #B4C9D1;
-      cursor: pointer;
-      font-weight: 400;
-      margin-right: rem-calc(20);
-    }
-
-    a:hover {
-      color: #fff;
-    }
-
-    #stargazers {
-      :before {
-        content: "\f09b";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-    #twitter {
-      :before {
-        content: "\f099";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-  }
-
-  .tagline {
-    @include breakpoint(small) {
-      @include xy-cell(8);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(5);
-      padding-top: 6rem;
-    }
-  }
-
-  h1 {
-    color: #fff;
-    font-weight: 500;
-
-    @include breakpoint(small) {
-      font-size: 2.2rem;
-    }
-
-    @include breakpoint(medium) {
-      font-size: 2.875rem;
-    }
-  }
-
-  h4 {
-    color: #fefefe;
-    font-weight: 300;
-    font-size: 1.3125rem;
-  }
-
-  .download {
-    margin-top: rem-calc(20);
+#front-hero {
+  height: 100vh;
+  @include xy-grid-container();
+  @include xy-grid();
+  .left-content,
+  .right-content {
+    @include xy-cell(6);
   }
 }
 
-// Intro
-.intro {
-  @include xy-grid-container;
-  @include xy-grid;
-
-  .fp-intro {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(10);
-      @include xy-cell-offset(1);
-
-      h2 {
-        font-weight: 300;
-        margin-bottom: 1.5rem;
-      }
-
-      h4 {
-        font-size: 1.125rem;
-        line-height: 1.6;
-        color: #777;
-        margin-bottom: 2rem;
-      }
-    }
-  }
+#projects {
+  @include xy-grid-container();
+  @include xy-grid();
 }
 
-// Section divider
-.section-divider {
-  @include xy-grid-container;
-  @include xy-grid;
+#experience {
+  @include xy-grid-container();
+  @include xy-grid();
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  position: relative;
 
-  hr {
-    @include xy-cell(12);
-    @extend .dotted;
-    box-sizing: border-box;
+  h2 {
+    color: $medium-gray;
+    z-index: -1;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    font-size: 8rem;
   }
-}
-
-// Benefits
-.benefits {
-  @include xy-grid-container;
-  @include xy-grid;
-  text-align: center;
-
-  header {
-    @include xy-cell(12);
-
-    h2 {
-      font-weight: 300;
+  .timeline {
+    &__divider {
+      background-color: $white;
+      height: 2px;
+      width: 100%;
+      margin: 1.5rem 0;
     }
-
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #777;
+    &__year {
+      color: $primary-green;
+      font-size: 1.2rem;
     }
-  }
+    &__title {
+      margin-top: 0;
+      min-height: 6rem;
+      display: flex;
+      align-items: flex-end;
 
-  .semantic,
-  .responsive,
-  .customizable,
-  .professional {
-    @include breakpoint(small) {
-      @include xy-cell(12);
+      h3 {
+        text-align: left;
+      }
     }
-
-    @include breakpoint(medium) {
-      @include xy-cell(3);
+    &__content {
+      &__position {
+        font-weight: 600;
+        color: $primary-green;
+      }
+      &__list {
+        // display: none;
+        color: $light-gray;
+      }
     }
-
-    img {
-      padding: 1.25rem;
-      margin: 1rem auto 0 auto;
-    }
-
-    h3 {
-      color: #0a0a0a;
-      font-weight: 300;
-      font-size: 1.75rem;
-    }
-
-    p {
-      font-size: 0.9375rem;
-    }
-  }
-
-  .why-foundation {
-    @include xy-cell(12);
-    margin-top: 4rem;
   }
 }

@@ -4,95 +4,94 @@ Template Name: Front
 */
 get_header(); ?>
 
-<header class="front-hero" role="banner">
-	<div class="marketing">
-		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>
-		</div>
-
-		<div class="watch">
-			<span id="stargazers"><a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a></span>
-			<span id="twitter"><a href="https://twitter.com/olefredrik">@olefredrik</a></span>
-		</div>
+<section id="front-hero">
+	<div class="left-content">
+		<span class="greeting">Hi!</span>
+		<h1>My name is <span class="green-text">Emmanuel</span></h1>
+		<p class="description">I'm a full stack Web Developer, iOS Developer, Wordpress Developer</p>
+		<span class="scroll">Scroll Down</span>
 	</div>
+	<div class="right-content">
+		<img src="https://picsum.photos/500/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+	</div>
+</section>
 
-</header>
+<section id="projects">
+	<h2>Projects</h2>
+</section>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
-	<div class="fp-intro">
-
-		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
+<section id="experience">
+	<h2>&lt;Experience&gt;</h2>
+	<div class="timeline" >
+		<div class="grid-container">
+			<div class="grid-x grid-margin-x">
+				<div class="cell small-12 medium-3"><span class="timeline__year">2016</span></div>
+				<div class="cell small-12 medium-3"><span class="timeline__year">2017</span></div>
+				<div class="cell small-12 medium-3"><span class="timeline__year">2018</span></div>
+				<div class="cell small-12 medium-3"><span class="timeline__year">2019</span></div>
+				<div class="timeline__divider"></div>
+				<div class="cell small-12 medium-3">
+					<div class="timeline__title">
+						<h3>TechCtrl</h3>
+					</div>
+					<div class="timeline__content">
+						<span class="timeline__content__position">Lead Developer & Computer Technician</span>
+						<ul class="timeline__content__list">
+							<li>Developed websites for multiple local clients. </li>
+							<li>Utilized knowledge of the repair process in order to provide customer feedback.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cell small-12 medium-3">
+					<div class="timeline__title">
+						<h3>Valley Technical Academy</h3>
+					</div>
+					<div class="timeline__content">
+						<span class="timeline__content__position">Website Developer and Teacher Assistant/Tutor</span>
+						<ul class="timeline__content__list">
+							<li>Assisted and tutored students enrolled in a Full Stack Web Development and User Experience Design course.</li>
+							<li>Taught a series of workshops in Web Development and iOS development.</li>
+						</ul>
+						<div class="timeline__title">
+							<h3>Cultura Agency</h3>
+						</div>
+						<div class="timeline__content">
+							<span class="timeline__content__position">Lead Developer</span>
+							<ul class="timeline__content__list">
+								<li>Developed websites for multiple local clients.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 medium-3">
+					<div class="timeline__title">
+						<h3>Imagine It Studios</h3>
+					</div>
+					<div class="timeline__content">
+						<span class="timeline__content__position">Developer/Tech Department</span>
+						<ul class="timeline__content__list">
+							<li>Developed websites for multiple clients that ranged from blog sites to e-commerce platforms.</li>
+							<li>Provided Search Engine Optimization and maintenance to approximately 20 clients’ websites.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cell small-12 medium-3">
+					<div class="timeline__title">
+						<h3>???</h3>
+					</div>
+				</div>
 			</div>
-			<footer>
-				<?php
-					wp_link_pages(
-						array(
-							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-							'after'  => '</p></nav>',
-						)
-					);
-				?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
 		</div>
-
 	</div>
-
 </section>
-<?php endwhile; ?>
-<?php do_action( 'foundationpress_after_content' ); ?>
 
-<div class="section-divider">
-	<hr />
-</div>
-
-
-<section class="benefits">
-	<header>
-		<h2>Build Foundation based sites, powered by WordPress</h2>
-		<h4>Foundation is the professional choice for designers, developers and teams. <br /> WordPress is by far, <a href="http://trends.builtwith.com/cms">the world's most popular CMS</a> (currently powering 38% of the web).</h4>
-	</header>
-
-	<div class="semantic">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/semantic.svg" alt="semantic">
-		<h3>Semantic</h3>
-		<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
-	</div>
-
-	<div class="responsive">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/responsive.svg" alt="responsive">
-		<h3>Responsive</h3>
-		<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p>
-
-	</div>
-
-	<div class="customizable">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/customizable.svg" alt="customizable">
-		<h3>Customizable</h3>
-		<p>You can customize your build to include or remove certain elements, as well as define the size of columns, colors, font size and more.</p>
-
-	</div>
-
-	<div class="professional">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/professional.svg" alt="professional">
-		<h3>Professional</h3>
-		<p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
-	</div>
-
-	<div class="why-foundation">
-		<a href="/kitchen-sink">See what's in Foundation out of the box →</a>
-	</div>
-
+<section id="about">
+	<h2>About Me</h2>
 </section>
+
+<section id="contact">
+	<h2>Contact Me</h2>
+</section>
+
 
 <?php get_footer();
