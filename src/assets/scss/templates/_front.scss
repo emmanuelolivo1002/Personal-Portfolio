@@ -1,6 +1,7 @@
 section {
   min-height: 100vh;
   border-bottom: 1px solid $white;
+  position: relative;
 }
 
 #front-hero {
@@ -24,24 +25,101 @@ section {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
   position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
+  @include breakpoint(medium) {
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+  }
+  @include breakpoint(large) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
   h2 {
-    color: $medium-gray;
-    z-index: -1;
-    position: absolute;
-    top: 4rem;
-    right: 1rem;
-    font-size: 8rem;
+    @include breakpoint(medium) {
+      top: 2.5rem;
+      right: 1rem;
+      font-size: 5.5rem;
+    }
+    @include breakpoint(large) {
+      top: 4rem;
+      right: 1rem;
+      font-size: 8rem;
+    }
   }
   .timeline {
+    display: grid;
+    grid-template-columns: 1fr 2rem 4fr;
+    grid-template-rows: repeat(5, min-content);
+    grid-row-gap: 2rem;
+    grid-template-areas:
+      "y2016  Divider   TechCtrl"
+      "y2017  Divider   ValleyTech"
+      ".      Divider   Cultura"
+      "y2018  Divider   IIS"
+      "y2019  Divider   Unknown";
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1.5rem 3rem repeat(2, max-content);
+      grid-column-gap: 2rem;
+      grid-row-gap: 1rem;
+      grid-template-areas:
+        "y2016      y2017       y2018     y2019"
+        "Divider    Divider     Divider   Divider"
+        "TechCtrl   ValleyTech  IIS       Unknown"
+        ".          Cultura     .         .";
+    }
+
+    .Year {
+      justify-self: end;
+      margin-right: 1rem;
+      @include breakpoint(large) {
+        justify-self: start;
+        margin: 0;
+      }
+    }
+    .y2016 {
+      grid-area: y2016;
+    }
+    .y2017 {
+      grid-area: y2017;
+    }
+    .y2018 {
+      grid-area: y2018;
+    }
+    .y2019 {
+      grid-area: y2019;
+    }
+    .Divider {
+      grid-area: Divider;
+    }
+    .TechCtrl {
+      grid-area: TechCtrl;
+    }
+    .ValleyTech {
+      grid-area: ValleyTech;
+    }
+    .Cultura {
+      grid-area: Cultura;
+    }
+    .IIS {
+      grid-area: IIS;
+    }
+    .Unknown {
+      grid-area: Unknown;
+    }
+
     &__divider {
       background-color: $white;
-      height: 2px;
-      width: 100%;
-      margin: 1.5rem 0;
+      height: 100%;
+      width: 2px;
+      @include breakpoint(large) {
+        height: 2px;
+        width: 100%;
+        margin: 1.5rem 0;
+      }
     }
     &__year {
       color: $primary-green;
@@ -49,10 +127,11 @@ section {
     }
     &__title {
       margin-top: 0;
-      min-height: 6rem;
       display: flex;
-      align-items: flex-end;
-
+      @include breakpoint(large) {
+        min-height: 6rem;
+        align-items: flex-end;
+      }
       h3 {
         text-align: left;
       }
@@ -63,7 +142,6 @@ section {
         color: $primary-green;
       }
       &__list {
-        // display: none;
         color: $light-gray;
       }
     }
