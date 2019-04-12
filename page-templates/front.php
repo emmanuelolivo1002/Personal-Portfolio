@@ -83,12 +83,90 @@ get_header(); ?>
 	</div>
 </section>
 
-<section id="about">
+<section class="about">
 	<h2>About Me</h2>
+	<div class="about__content Intro">
+		<h3>I'm a Full Stack Web Developer</h3>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ullam voluptatum natus illo delectus aliquam placeat vel, corrupti rem, eaque reiciendis aspernatur quibusdam reprehenderit ad sint vero, minus nemo doloremque?</p>
+	</div>
+	<div class="about__image IntroImg">
+		<img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+	</div>
+	<div class="about__image SkillsImg">
+		<img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+	</div>
+	<div class="about__content Skills">
+		<h3>Skills</h3>
+		<div class="Skills__bars">
+			<div class="skill">
+				<div class="skill__data">
+					<span class="skill__data__name">html5</span>
+					<span class="skill__data__value">90%</span>
+				</div>
+				<div class="progress">
+					<div class="progress-meter" style="width: 90%">
+					</div>
+				</div>
+			</div>
+			<div class="skill">
+				<div class="skill__data">
+					<span class="skill__data__name">css3</span>
+					<span class="skill__data__value">90%</span>
+				</div>
+				<div class="progress">
+					<div class="progress-meter" style="width: 90%">
+					</div>
+				</div>
+			</div>
+			<div class="skill">
+				<div class="skill__data">
+					<span class="skill__data__name">js</span>
+					<span class="skill__data__value">80%</span>
+				</div>
+				<div class="progress">
+					<div class="progress-meter" style="width: 80%">
+					</div>
+				</div>
+			</div>
+			<div class="skill">
+				<div class="skill__data">
+					<span class="skill__data__name">php</span>
+					<span class="skill__data__value">60%</span>
+				</div>
+				<div class="progress">
+					<div class="progress-meter" style="width: 60%">
+					</div>
+				</div>
+			</div>
+			<div class="skill">
+				<div class="skill__data">
+					<span class="skill__data__name">swift</span>
+					<span class="skill__data__value">50%</span>
+				</div>
+				<div class="progress">
+					<div class="progress-meter" style="width: 50%">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="about__content Facts">
+		<h3>Fun Facts</h3>
+		<ul>
+			<li>100% Fluent in Spanish</li>
+			<li>Can solve a Rubik’s cube in less than 30 seconds</li>
+			<li>Play the Ukulele</li>
+			<li>Like long walks on the beach and rainy days</li>
+		</ul>
+	</div>
+	<div class="about__image FactsImg">
+		<img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+	</div>
 </section>
 
 <section id="contact">
 	<h2>Contact Me</h2>
+	
 </section>
 
 
