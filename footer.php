@@ -11,7 +11,11 @@
 
 <footer class="footer-container">
 	<div class="footer-grid">
-		<?php dynamic_sidebar( 'footer-widgets' ); ?>
+		<p>	&copy; <?php
+  		$fromYear = 2019; 
+  		$thisYear = (int)date('Y'); 
+  		echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Emmanuel Olivo.</p>
+		<p>Made with <i class="far fa-heart"></i> and <i class="fab fa-sass"></i></p>
 	</div>
 </footer>
 
