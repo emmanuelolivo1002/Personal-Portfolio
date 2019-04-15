@@ -202,8 +202,19 @@ section {
     width: 100%;
     text-align: center;
     @include breakpoint(large) {
+      width: auto;
       text-align: left;
       left: 2rem;
+      top: 0;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 7rem;
+      top: 5rem;
+    }
+    @include breakpoint(xxlarge) {
+      top: 4rem;
+
+      font-size: 8rem;
     }
   }
   &__image {
