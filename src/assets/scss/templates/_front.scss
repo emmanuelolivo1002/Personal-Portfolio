@@ -1,6 +1,5 @@
 section {
   min-height: 100vh;
-  border-bottom: 1px solid $white;
   position: relative;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -153,7 +152,6 @@ section {
 
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, 1fr);
-  // grid-auto-rows: minmax(400px, min-content);
   grid-row-gap: 2rem;
   grid-template-areas:
     "Intro"
@@ -269,6 +267,116 @@ section {
             font-family: $header-font-family;
             font-weight: 600;
             font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include breakpoint(large) {
+    padding-top: 12rem;
+  }
+  h2 {
+    @include breakpoint(medium) {
+      top: 0;
+    }
+    @include breakpoint(large) {
+      right: 5rem;
+    }
+  }
+  .contact-form-container {
+    padding: 1.5rem;
+    border: 2px solid $white;
+    .wpforms-container.wpforms-container-full {
+      padding: 0;
+      margin: 0;
+      .wpforms-field > input,
+      .wpforms-field > textarea {
+        background-color: transparent;
+        color: $primary-green;
+      }
+      .wpforms-submit-container {
+        display: flex;
+        justify-content: flex-end;
+        .wpforms-submit {
+          background-color: transparent;
+          color: $white;
+          padding: 0.5rem 3rem;
+          transition: 0.2s ease-out all;
+          &:hover {
+            background-color: $white;
+            color: $dark-gray;
+          }
+        }
+      }
+      .wpforms-field input.wpforms-error {
+        border: 1px solid $error-red;
+      }
+      label.wpforms-error {
+        color: $error-red;
+        font-weight: bold;
+      }
+    }
+    #wpforms-confirmation-8,
+    .wpforms-confirmation-container-full {
+      color: $primary-green;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    @include breakpoint(large) {
+      padding-left: 2rem;
+    }
+    h3 {
+      @include breakpoint(large) {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .links-container {
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        .button-link {
+          margin: 0 1rem;
+          background-color: transparent;
+          border-radius: 50%;
+          border: 2px solid $white;
+          width: 3rem;
+          height: 3rem;
+          transition: 0.2s ease-in all;
+          &:first-child {
+            margin-left: 0;
+          }
+          a {
+            color: $primary-green;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: 0.2s ease-in all;
+          }
+          &:hover {
+            background-color: $white;
+            a {
+              color: $dark-gray;
+            }
           }
         }
       }

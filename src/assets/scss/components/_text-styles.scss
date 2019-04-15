@@ -2,6 +2,10 @@
   color: $primary-green;
 }
 
+::placeholder {
+  color: $white;
+}
+
 h2 {
   color: $medium-gray;
   font-size: 3.5rem;
