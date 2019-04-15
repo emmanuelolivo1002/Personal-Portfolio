@@ -226,10 +226,19 @@ section {
     &.Skills {
       align-items: center;
       padding: 2rem;
+      @include breakpoint(large) {
+        padding: 3rem;
+      }
       .Skills__bars {
         min-width: 350px;
+        @include breakpoint(medium) {
+          min-width: 550px;
+        }
         @include breakpoint(large) {
-          min-width: 500px;
+          min-width: 400px;
+        }
+        @include breakpoint(xlarge) {
+          min-width: 550px;
         }
         .skill {
           width: 100%;
