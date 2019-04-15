@@ -90,10 +90,10 @@ get_header(); ?>
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ullam voluptatum natus illo delectus aliquam placeat vel, corrupti rem, eaque reiciendis aspernatur quibusdam reprehenderit ad sint vero, minus nemo doloremque?</p>
 	</div>
 	<div class="about__image IntroImg">
-		<img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+		<!-- <img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer"> -->
 	</div>
 	<div class="about__image SkillsImg">
-		<img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+		<!-- <img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer"> -->
 	</div>
 	<div class="about__content Skills">
 		<h3>Skills</h3>
@@ -160,7 +160,7 @@ get_header(); ?>
 		</ul>
 	</div>
 	<div class="about__image FactsImg">
-		<img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+		<!-- <img src="https://picsum.photos/1000/?random" alt="Emmanuel Olivo | Full Stack Web Developer"> -->
 	</div>
 </section>
 
