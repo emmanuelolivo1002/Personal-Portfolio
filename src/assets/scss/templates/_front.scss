@@ -16,11 +16,50 @@ section {
 
 #front-hero {
   height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
   @include xy-grid-container();
   @include xy-grid();
   .left-content,
   .right-content {
-    @include xy-cell(6);
+    @include xy-cell(12);
+
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+    }
+  }
+
+  h1 {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+  .greeting {
+    font-family: $header-font-family;
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .description {
+    font-family: $header-font-family;
+    width: 80%;
+    font-size: 1.3rem;
+  }
+  .scroll {
+    color: $white;
+    .arrow {
+      opacity: 0;
+      transition: 0.3s ease-out all;
+    }
+    &:hover {
+      color: $white;
+      .arrow {
+        opacity: 1;
+      }
+    }
   }
 }
 

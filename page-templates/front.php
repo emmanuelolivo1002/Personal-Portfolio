@@ -9,7 +9,7 @@ get_header(); ?>
 		<span class="greeting">Hi!</span>
 		<h1>My name is <span class="green-text">Emmanuel</span></h1>
 		<p class="description">I'm a full stack Web Developer, iOS Developer, Wordpress Developer</p>
-		<span class="scroll">Scroll Down</span>
+		<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
 	</div>
 	<div class="right-content">
 		<img src="https://picsum.photos/500/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
