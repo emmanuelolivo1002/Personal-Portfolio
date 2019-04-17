@@ -18,6 +18,53 @@ get_header(); ?>
 
 <section id="projects">
 	<h2>Projects</h2>
+	<div class="projects-grid">
+		<div class="project project-1">
+			<h3>P1</h3>
+		</div>
+		<div class="project project-2">
+			<h3>P2</h3>
+		</div>
+		<div class="project project-3">
+			<h3>P3</h3>
+		</div>
+		<div class="project project-4">
+			<h3>P4</h3>
+		</div>
+		<div class="project project-5">
+			<h3>P5</h3>
+		</div>
+		<div class="project project-6">
+			<h3>P6</h3>
+		</div>
+		<div class="project project-7">
+			<h3>P7</h3>
+		</div>
+		<div class="project project-8">
+			<h3>P8</h3>
+		</div>
+		<div class="project project-9">
+			<h3>P9</h3>
+		</div>
+		<div class="project project-10">
+			<h3>P10</h3>
+		</div>
+		<div class="project project-11">
+			<h3>P11</h3>
+		</div>
+		<div class="project project-12">
+			<h3>P12</h3>
+		</div>
+		<div class="project project-13">
+			<h3>P13</h3>
+		</div>
+		<div class="project project-14">
+			<h3>P14</h3>
+		</div>
+		<div class="project project-15">
+			<h3>P15</h3>
+		</div>
+	</div>
 </section>
 
 <section id="experience">
@@ -83,7 +130,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="about">
+<section id="about" class="about">
 	<h2>About Me</h2>
 	<div class="about__content Intro">
 		<h3>I'm a Full Stack Web Developer</h3>

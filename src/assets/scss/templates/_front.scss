@@ -65,7 +65,109 @@ section {
 
 #projects {
   @include xy-grid-container();
-  @include xy-grid();
+  h2 {
+    top: 0;
+  }
+  .projects-grid {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 8vw);
+    grid-auto-rows: 8vw;
+    grid-gap: 0.5rem;
+    grid-auto-flow: dense;
+    grid-template-areas:
+      "P1   P1    P1    P1    P2    P2"
+      "P1   P1    P1    P1    P2    P2"
+      "P1   P1    P1    P1    P2    P2"
+      "P3   P3    P4    P4    P2    P2"
+      "P3   P3    P4    P4    P5    P5"
+      "P3   P3    P4    P4    P5    P5"
+      "P6   P6    P4    P4    P5    P5"
+      "P6   P6    P7    P7    P7    P7"
+      "P6   P6    P7    P7    P7    P7"
+      "P6   P6    P7    P7    P7    P7"
+      "P8   P8    P9    P9    P10   P10"
+      "P8   P8    P9    P9    P10   P10"
+      "P8   P8    P9    P9    P10   P10"
+      "P8   P8    P9    P9    P10   P10"
+      "P11  P11   P11   P12   P12   P12"
+      "P11  P11   P11   P12   P12   P12"
+      "P11  P11   P11   P12   P12   P12"
+      "P11  P11   P11   P12   P12   P12"
+      "P13  P13   P14   P14   P15   P15"
+      "P13  P13   P14   P14   P15   P15"
+      "P13  P13   P14   P14   P15   P15"
+      "P13  P13   P14   P14   P15   P15"
+      "P13  P13   P14   P14   P15   P15";
+    @include breakpoint(large) {
+      grid-gap: 1rem;
+      grid-template-areas:
+        "P1   P1    P2    P3    P3    P4"
+        "P1   P1    P5    P5    P5    P4"
+        "P7   P7    P5    P5    P5    P6"
+        "P7   P7    P8    P8    P9    P9"
+        "P7   P7    P8    P8    P9    P9"
+        "P10  P11   P8    P8    P15   P15"
+        "P10  P12   P14   P14   P15   P15"
+        "P13  P13   P14   P14   P15   P15";
+    }
+
+    h3 {
+      color: $dark-gray;
+    }
+    .project {
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-1 {
+        grid-area: P1;
+      }
+      &-2 {
+        grid-area: P2;
+      }
+      &-3 {
+        grid-area: P3;
+      }
+      &-4 {
+        grid-area: P4;
+      }
+      &-5 {
+        grid-area: P5;
+      }
+      &-6 {
+        grid-area: P6;
+      }
+      &-7 {
+        grid-area: P7;
+      }
+      &-8 {
+        grid-area: P8;
+      }
+      &-9 {
+        grid-area: P9;
+      }
+      &-10 {
+        grid-area: P10;
+      }
+      &-11 {
+        grid-area: P11;
+      }
+      &-12 {
+        grid-area: P12;
+      }
+      &-13 {
+        grid-area: P13;
+      }
+      &-14 {
+        grid-area: P14;
+      }
+      &-15 {
+        grid-area: P15;
+      }
+    }
+  }
 }
 
 #experience {
