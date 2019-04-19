@@ -18,53 +18,41 @@ get_header(); ?>
 
 <section id="projects">
 	<h2>Projects</h2>
-	<div class="projects-grid">
-		<div class="project project-1">
-			<h3>P1</h3>
-		</div>
-		<div class="project project-2">
-			<h3>P2</h3>
-		</div>
-		<div class="project project-3">
-			<h3>P3</h3>
-		</div>
-		<div class="project project-4">
-			<h3>P4</h3>
-		</div>
-		<div class="project project-5">
-			<h3>P5</h3>
-		</div>
-		<div class="project project-6">
-			<h3>P6</h3>
-		</div>
-		<div class="project project-7">
-			<h3>P7</h3>
-		</div>
-		<div class="project project-8">
-			<h3>P8</h3>
-		</div>
-		<div class="project project-9">
-			<h3>P9</h3>
-		</div>
-		<div class="project project-10">
-			<h3>P10</h3>
-		</div>
-		<div class="project project-11">
-			<h3>P11</h3>
-		</div>
-		<div class="project project-12">
-			<h3>P12</h3>
-		</div>
-		<div class="project project-13">
-			<h3>P13</h3>
-		</div>
-		<div class="project project-14">
-			<h3>P14</h3>
-		</div>
-		<div class="project project-15">
-			<h3>P15</h3>
-		</div>
-	</div>
+		<?php
+			$args = array(
+				'post_type'   => 'project',
+				'post_status' => 'publish',
+				'posts_per_page' => '-1'
+			);
+			
+			$projects = new WP_Query( $args );
+			if( $projects->have_posts() ) :
+			?>
+				<div class="projects-grid">
+					<?php
+						while( $projects->have_posts() ) :
+							$projects->the_post();
+							$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+							$number = get_field('number');
+							?>
+								<?php  
+									echo '<a href="'.get_permalink().'" class="project project-'.$number.'" style="background: url('.esc_url($featured_img_url).' ); background-size: cover; background-position: center">
+										<div class="project__content">
+											<h3 class="project__name">'.get_the_title().'</h3>
+										</div>	
+									</a>';
+								?>
+
+							<?php
+						endwhile;
+						wp_reset_postdata();
+					?>
+				</div>
+			<?php
+			else :
+				esc_html_e( 'Updating projects. Come back later!', 'text-domain' );
+			endif;
+		?>
 </section>
 
 <section id="experience">
