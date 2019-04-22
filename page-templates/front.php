@@ -14,7 +14,7 @@ get_header(); ?>
 				<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
 			</div>
 			<div class="cell small-12 large-6 small-order-1 large-order-2 right-content">
-				<img src="/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/hero.jpg" alt="Emmanuel Olivo | Full Stack Web Developer" class="front-hero-img grayscale-img">
+				<img src="/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/hero.jpg" alt="Emmanuel Olivo | Full Stack Web Developer" class="front-hero-img grayscale-img" data-aos="hero-image-animation">
 			</div>
 		</div>
 	</div>
@@ -40,7 +40,7 @@ get_header(); ?>
 							$number = get_field('number');
 							?>
 								<?php  
-									echo '<a href="'.get_permalink().'" class="project project-'.$number.'" style="background: url('.esc_url($featured_img_url).' ); background-size: cover; background-position: center">
+									echo '<a href="'.get_permalink().'" class="project project-'.$number.'" style="background: url('.esc_url($featured_img_url).' ); background-size: cover; background-position: center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 										<div class="project__content">
 											<h3 class="project__name">'.get_the_title().'</h3>
 										</div>	
@@ -67,7 +67,7 @@ get_header(); ?>
 		<div class="Year y2018"><span class="timeline__year">2018</span></div>
 		<div class="Year y2019"><span class="timeline__year">2019</span></div>
 		<div class="Divider timeline__divider"></div>
-		<div class="TechCtrl">
+		<div class="TechCtrl" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
 			<div class="timeline__title">
 				<h3>TechCtrl</h3>
 			</div>
@@ -79,7 +79,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
-		<div class="ValleyTech">
+		<div class="ValleyTech" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="100">
 			<div class="timeline__title">
 				<h3>Valley Technical Academy</h3>
 			</div>
@@ -91,7 +91,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
-		<div class="Cultura">
+		<div class="Cultura" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
 			<div class="timeline__title">
 				<h3>Cultura Agency</h3>
 			</div>
@@ -102,7 +102,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
-		<div class="IIS">
+		<div class="IIS" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="200">
 			<div class="timeline__title">
 				<h3>Imagine It Studios</h3>
 			</div>
@@ -114,7 +114,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
-		<div class="Unknown">
+		<div class="Unknown" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="300">
 			<div class="timeline__title">
 				<h3>???</h3>
 			</div>
@@ -125,11 +125,14 @@ get_header(); ?>
 <section id="about" class="about">
 	<div class="Heading"><h2>&lt;About Me&gt;</h2></div>
 	<div class="about__content Intro">
-		<h3>I'm a Full Stack Web Developer</h3>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ullam voluptatum natus illo delectus aliquam placeat vel, corrupti rem, eaque reiciendis aspernatur quibusdam reprehenderit ad sint vero, minus nemo doloremque?</p>
+		<!-- <h3>I'm a Full Stack Web Developer</h3> -->
+		<p>Hello! My name is Emmanuel Olivo a.k.a. “Emmanuel Con Dos Emes”. I’m a full stack web developer as well as an iOS developer.</p>
+		<p>I’m originally from Veracruz, Mexico and have been living in South Texas since 2012. I got my Bachelor’s degree in Computer Engineering from The University of Texas Rio Grande Valley in 2016.</p>
+		<p>Ever since I was little I developed (see what I did there?) a passion for video games and computers leading to me starting to make my first text adventure games when I learned Pascal in high school. And later when I learned Visual Basic, I started creating my very first apps for school projects.</p>
+		<p>Years and tons of stack overflow searches later I’m now a full stack/iOS developer with the capabilities of creating multiple apps that I could only draw in my notebook when I was a kid.</p>
 	</div>
-	<div class="about__image grayscale-img IntroImg"></div>
-	<div class="about__image grayscale-img SkillsImg"></div>
+	<div class="about__image grayscale-img IntroImg" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="100"></div>
+	<div class="about__image grayscale-img SkillsImg" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="100"></div>
 	<div class="about__content Skills">
 		<h3>Skills</h3>
 		<div class="Skills__bars">
@@ -139,7 +142,7 @@ get_header(); ?>
 					<span class="skill__data__value">90%</span>
 				</div>
 				<div class="progress">
-					<div class="progress-meter" style="width: 90%">
+					<div class="progress-meter" style="width: 90%" data-aos="progress-animation" data-aos-once="true" >
 					</div>
 				</div>
 			</div>
@@ -149,7 +152,7 @@ get_header(); ?>
 					<span class="skill__data__value">90%</span>
 				</div>
 				<div class="progress">
-					<div class="progress-meter" style="width: 90%">
+					<div class="progress-meter" style="width: 90%" data-aos="progress-animation" data-aos-once="true">
 					</div>
 				</div>
 			</div>
@@ -159,7 +162,17 @@ get_header(); ?>
 					<span class="skill__data__value">80%</span>
 				</div>
 				<div class="progress">
-					<div class="progress-meter" style="width: 80%">
+					<div class="progress-meter" style="width: 80%" data-aos="progress-animation" data-aos-once="true">
+					</div>
+				</div>
+			</div>
+			<div class="skill">
+				<div class="skill__data">
+					<span class="skill__data__name">React</span>
+					<span class="skill__data__value">70%</span>
+				</div>
+				<div class="progress">
+					<div class="progress-meter" style="width: 70%" data-aos="progress-animation" data-aos-once="true">
 					</div>
 				</div>
 			</div>
@@ -169,7 +182,7 @@ get_header(); ?>
 					<span class="skill__data__value">60%</span>
 				</div>
 				<div class="progress">
-					<div class="progress-meter" style="width: 60%">
+					<div class="progress-meter" style="width: 60%" data-aos="progress-animation" data-aos-once="true">
 					</div>
 				</div>
 			</div>
@@ -179,7 +192,7 @@ get_header(); ?>
 					<span class="skill__data__value">50%</span>
 				</div>
 				<div class="progress">
-					<div class="progress-meter" style="width: 50%">
+					<div class="progress-meter" style="width: 50%" data-aos="progress-animation" data-aos-once="true">
 					</div>
 				</div>
 			</div>
@@ -188,13 +201,14 @@ get_header(); ?>
 	<div class="about__content Facts">
 		<h3>Fun Facts</h3>
 		<ul>
-			<li>100% Fluent in Spanish</li>
-			<li>Can solve a Rubik’s cube in less than 30 seconds</li>
-			<li>Play the Ukulele</li>
-			<li>Like long walks on the beach and rainy days</li>
+			<li>I'm 100% Fluent in Spanish</li>
+			<li>I can solve a Rubik’s cube in less than 30 seconds</li>
+			<li>Sometimes I play the Ukulele</li>
+			<li>I'm a Nintendo Fanboy</li>
+			<li>I like long walks on the beach and rainy days</li>
 		</ul>
 	</div>
-	<div class="about__image grayscale-img FactsImg"></div>
+	<div class="about__image grayscale-img FactsImg" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="100"></div>
 </section>
 
 <section id="contact">
@@ -207,8 +221,8 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="cell small-12 large-6 info-container">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio facilis eos ipsa quibusdam temporibus. Asperiores.</p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio facilis eos ipsa quibusdam temporibus. Asperiores.</p>
+				<p>Whether you need somebody to develop an app or you want a brand new website for your business.</p>
+				<p>Don't stay quiet! If you have an idea for a project? Let me know!</p>
 				<h3>Follow Me!</h3>
 				<div class="links-container">
 					<ul>

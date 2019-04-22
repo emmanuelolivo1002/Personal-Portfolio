@@ -456,6 +456,7 @@ section {
         }
         .skill {
           width: 100%;
+          overflow: hidden;
           margin: 1.5rem auto;
           &__data {
             display: flex;

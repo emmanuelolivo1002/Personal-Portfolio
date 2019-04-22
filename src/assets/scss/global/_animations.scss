@@ -1,0 +1,44 @@
+/**
+ * ----------------------------------------
+ * animation slide-right
+ * ----------------------------------------
+ */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+[data-aos="progress-animation"] {
+  transform: translateX(-500px);
+  &.aos-animate {
+    animation: slide-right 0.8s ease-out both;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+@keyframes slide-left {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+[data-aos="hero-image-animation"] {
+  transform: translateX(100vw);
+  opacity: 0;
+  &.aos-animate {
+    animation: slide-left 0.8s ease-in-out both;
+  }
+}
