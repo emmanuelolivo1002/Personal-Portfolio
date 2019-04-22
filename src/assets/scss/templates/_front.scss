@@ -471,6 +471,8 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
   @include breakpoint(large) {
     padding-top: 12rem;
   }
@@ -533,8 +535,13 @@ section {
       padding-left: 2rem;
     }
     h3 {
+      text-align: center;
+      margin-top: 2rem;
+      @include breakpoint(small only) {
+        font-size: 2rem;
+      }
       @include breakpoint(large) {
-        margin-top: 2rem;
+        text-align: left;
         margin-bottom: 1rem;
       }
     }
@@ -543,6 +550,13 @@ section {
         list-style: none;
         display: flex;
         margin: 0;
+        justify-content: space-around;
+        max-width: 400px;
+        margin: 0.8rem auto;
+        @include breakpoint(large) {
+          justify-content: flex-start;
+          margin: 0;
+        }
         .button-link {
           margin: 0 1rem;
           background-color: transparent;
@@ -551,11 +565,13 @@ section {
           width: 3rem;
           height: 3rem;
           transition: 0.2s ease-in all;
+          @include breakpoint(large) {
+            &:first-child {
+              margin-left: 0;
+            }
+          }
           &::before {
             display: none;
-          }
-          &:first-child {
-            margin-left: 0;
           }
           a {
             color: $primary-green;
