@@ -213,16 +213,16 @@ get_header(); ?>
 				<div class="links-container">
 					<ul>
 						<li class="button-link">
-							<a href="#"><i class="fab fa-github"></i></a>
+							<a href="https://github.com/emmanuelolivo1002" target="_blank"><i class="fab fa-github"></i></a>
 						</li>
 						<li class="button-link">
-							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/in/emmanuel-olivo/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 						</li>
 						<li class="button-link">
-							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/emmanuelcondosemes/" target="_blank"><i class="fab fa-instagram"></i></a>
 						</li>
 						<li class="button-link">
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="https://twitter.com/EmmConDosEmes" target="_blank"><i class="fab fa-twitter"></i></a>
 						</li>
 					</ul>
 				</div>
