@@ -582,6 +582,9 @@ section {
             justify-content: center;
             font-size: 1.5rem;
             transition: 0.2s ease-in all;
+            &:hover {
+              font-weight: 400;
+            }
           }
           &:hover {
             background-color: $white;
