@@ -72,8 +72,7 @@ section {
     margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(8, 8vw);
-    grid-auto-rows: 8vw;
+    grid-auto-rows: 10vw;
     grid-gap: 0.5rem;
     grid-auto-flow: dense;
     grid-template-areas:
