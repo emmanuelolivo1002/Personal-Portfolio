@@ -61,6 +61,12 @@
   }
 }
 
+.menu-item {
+  &::before {
+    display: none;
+  }
+}
+
 // Tablet and desktop menu
 
 .top-bar {
@@ -90,9 +96,6 @@
 
   .menu .menu-item {
     background-color: transparent;
-    &::before {
-      display: none;
-    }
   }
 
   .menu > li:not(.menu-text) > a {
