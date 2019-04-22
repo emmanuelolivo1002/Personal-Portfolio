@@ -90,6 +90,9 @@
 
   .menu .menu-item {
     background-color: transparent;
+    &::before {
+      display: none;
+    }
   }
 
   .menu > li:not(.menu-text) > a {

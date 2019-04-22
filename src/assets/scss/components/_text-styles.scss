@@ -23,3 +23,30 @@ h2 {
     font-size: 8rem;
   }
 }
+
+a {
+  color: $primary-green;
+  &:hover,
+  &:focus {
+    color: lighten($primary-green, 5);
+    font-weight: 600;
+  }
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  li {
+    padding-left: 1em;
+    text-indent: -1em;
+    &:before {
+      content: ">";
+      padding-right: 5px;
+      color: $primary-green;
+      font-family: $header-font-family;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+}
