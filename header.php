@@ -42,10 +42,17 @@
 			</div>
 			<div class="top-bar-right">
 				<ul id="menu-main-navigation" class="dropdown menu desktop-menu" role="menubar" >
-					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#projects">Projects</a></li>
-					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#experience">Experience</a></li>
-					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#about">About</a></li>
-					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#contact">Contact</a></li>
+					<?php if(!is_front_page()) : ?>
+						<li class="menu-item" role="menuitem"><a href="<?php home_url(); ?>/#projects">Projects</a></li>
+						<li class="menu-item" role="menuitem"><a href="<?php home_url(); ?>/#experience">Experience</a></li>
+						<li class="menu-item" role="menuitem"><a href="<?php home_url(); ?>/#about">About</a></li>
+						<li class="menu-item" role="menuitem"><a href="<?php home_url(); ?>/#contact">Contact</a></li>
+					<?php else: ?>
+						<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#projects">Projects</a></li>
+						<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#experience">Experience</a></li>
+						<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#about">About</a></li>
+						<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#contact">Contact</a></li>
+					<?php endif; ?>
 				</ul>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
