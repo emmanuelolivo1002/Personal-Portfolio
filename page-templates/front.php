@@ -14,7 +14,7 @@ get_header(); ?>
 				<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
 			</div>
 			<div class="cell small-12 medium-6 small-order-1 medium-order-2 right-content">
-				<img src="https://picsum.photos/500/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+				<img src="https://picsum.photos/500/?random" alt="Emmanuel Olivo | Full Stack Web Developer" class="grayscale-img">
 			</div>
 		</div>
 	</div>
@@ -128,8 +128,8 @@ get_header(); ?>
 		<h3>I'm a Full Stack Web Developer</h3>
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ullam voluptatum natus illo delectus aliquam placeat vel, corrupti rem, eaque reiciendis aspernatur quibusdam reprehenderit ad sint vero, minus nemo doloremque?</p>
 	</div>
-	<div class="about__image IntroImg"></div>
-	<div class="about__image SkillsImg"></div>
+	<div class="about__image grayscale-img IntroImg"></div>
+	<div class="about__image grayscale-img SkillsImg"></div>
 	<div class="about__content Skills">
 		<h3>Skills</h3>
 		<div class="Skills__bars">
@@ -194,7 +194,7 @@ get_header(); ?>
 			<li>Like long walks on the beach and rainy days</li>
 		</ul>
 	</div>
-	<div class="about__image FactsImg"></div>
+	<div class="about__image grayscale-img FactsImg"></div>
 </section>
 
 <section id="contact">
