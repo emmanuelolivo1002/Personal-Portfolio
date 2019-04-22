@@ -544,6 +544,9 @@ section {
           width: 3rem;
           height: 3rem;
           transition: 0.2s ease-in all;
+          &::before {
+            display: none;
+          }
           &:first-child {
             margin-left: 0;
           }
