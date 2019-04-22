@@ -359,7 +359,7 @@ section {
   }
   .IntroImg {
     grid-area: IntroImg;
-    background-image: url("https://picsum.photos/1000/?random");
+    background-image: url("/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/intro.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -368,7 +368,7 @@ section {
   }
   .SkillsImg {
     grid-area: SkillsImg;
-    background-image: url("https://picsum.photos/1000/?random");
+    background-image: url("/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/skills.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -377,7 +377,7 @@ section {
   }
   .FactsImg {
     grid-area: FactsImg;
-    background-image: url("https://picsum.photos/1000/?random");
+    background-image: url("/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/fun-facts.jpg");
     background-size: cover;
     background-position: center;
   }
