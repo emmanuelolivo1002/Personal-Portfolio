@@ -5,14 +5,18 @@ Template Name: Front
 get_header(); ?>
 
 <section id="front-hero">
-	<div class="left-content">
-		<span class="greeting">Hi!</span>
-		<h1>My name is <span class="green-text">Emmanuel</span></h1>
-		<p class="description">I'm a full stack Web Developer, iOS Developer, Wordpress Developer</p>
-		<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
-	</div>
-	<div class="right-content">
-		<img src="https://picsum.photos/500/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-y">
+			<div class="cell small-12 medium-6 small-order-2 medium-order-1 left-content">
+				<span class="greeting">Hi!</span>
+				<h1>My name is <span class="green-text">Emmanuel</span></h1>
+				<p class="description">I'm a full stack Web Developer, iOS Developer and Wordpress Developer</p>
+				<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
+			</div>
+			<div class="cell small-12 medium-6 small-order-1 medium-order-2 right-content">
+				<img src="https://picsum.photos/500/?random" alt="Emmanuel Olivo | Full Stack Web Developer">
+			</div>
+		</div>
 	</div>
 </section>
 
