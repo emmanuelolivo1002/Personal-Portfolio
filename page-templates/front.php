@@ -21,7 +21,7 @@ get_header(); ?>
 </section>
 
 <section id="projects">
-	<h2>Projects</h2>
+	<h2>&lt;Projects&gt;</h2>
 		<?php
 			$args = array(
 				'post_type'   => 'project',
@@ -123,7 +123,7 @@ get_header(); ?>
 </section>
 
 <section id="about" class="about">
-	<h2>About Me</h2>
+	<div class="Heading"><h2>&lt;About Me&gt;</h2></div>
 	<div class="about__content Intro">
 		<h3>I'm a Full Stack Web Developer</h3>
 		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ullam voluptatum natus illo delectus aliquam placeat vel, corrupti rem, eaque reiciendis aspernatur quibusdam reprehenderit ad sint vero, minus nemo doloremque?</p>
@@ -198,7 +198,7 @@ get_header(); ?>
 </section>
 
 <section id="contact">
-	<h2>Contact Me</h2>
+	<h2>&lt;Contact Me&gt;</h2>
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x grid-margin-y">
 			<div class="cell small-12 large-6">

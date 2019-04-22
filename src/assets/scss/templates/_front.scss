@@ -330,6 +330,7 @@ section {
   grid-template-rows: repeat(auto-fit, 1fr);
   grid-row-gap: 2rem;
   grid-template-areas:
+    "Heading"
     "Intro"
     "IntroImg"
     "Skills"
@@ -345,6 +346,13 @@ section {
       "Intro      IntroImg"
       "SkillsImg  Skills"
       "Facts      FactsImg";
+  }
+  .Heading {
+    grid-area: Heading;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
   .Intro {
     grid-area: Intro;
@@ -377,20 +385,19 @@ section {
   h2 {
     width: 100%;
     text-align: center;
+    @include breakpoint(small only) {
+      position: relative;
+      margin-bottom: 0;
+    }
     @include breakpoint(large) {
       width: auto;
       text-align: left;
       left: 2rem;
       top: 0;
     }
-    @include breakpoint(xlarge) {
-      font-size: 7rem;
-      top: 5rem;
-    }
     @include breakpoint(xxlarge) {
       top: 4rem;
-
-      font-size: 8rem;
+      font-size: 7rem;
     }
   }
   &__image {
