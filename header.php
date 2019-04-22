@@ -24,8 +24,8 @@
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
 
-	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle(); ?>>
+	<header class="site-header" role="banner" data-sticky-container>
+		<div class="site-title-bar title-bar sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;" style="z-index: 1000;" <?php foundationpress_title_bar_responsive_toggle(); ?>>
 			<div class="title-bar-left">
 				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 				<span class="site-mobile-title title-bar-title">
@@ -34,14 +34,19 @@
 			</div>
 		</div>
 
-		<nav class="site-navigation top-bar" role="navigation">
+		<nav class="site-navigation top-bar sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div>
 			</div>
 			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+				<ul id="menu-main-navigation" class="dropdown menu desktop-menu" role="menubar" >
+					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#projects">Projects</a></li>
+					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#experience">Experience</a></li>
+					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#about">About</a></li>
+					<li class="menu-item" role="menuitem"><a data-smooth-scroll href="#contact">Contact</a></li>
+				</ul>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
