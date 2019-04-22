@@ -6,15 +6,15 @@ get_header(); ?>
 
 <section id="front-hero">
 	<div class="grid-container">
-		<div class="grid-x grid-margin-y">
-			<div class="cell small-12 medium-6 small-order-2 medium-order-1 left-content">
+		<div class="grid-x grid-margin-x grid-margin-y">
+			<div class="cell small-12 large-6 small-order-2 large-order-1 left-content">
 				<span class="greeting">Hi!</span>
 				<h1>My name is <span class="green-text">Emmanuel</span></h1>
 				<p class="description">I'm a full stack Web Developer, iOS Developer and Wordpress Developer</p>
 				<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
 			</div>
-			<div class="cell small-12 medium-6 small-order-1 medium-order-2 right-content">
-				<img src="/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/hero.jpg" alt="Emmanuel Olivo | Full Stack Web Developer" class="grayscale-img">
+			<div class="cell small-12 large-6 small-order-1 large-order-2 right-content">
+				<img src="/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/hero.jpg" alt="Emmanuel Olivo | Full Stack Web Developer" class="front-hero-img grayscale-img">
 			</div>
 		</div>
 	</div>
