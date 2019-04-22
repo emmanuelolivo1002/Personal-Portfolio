@@ -1,0 +1,66 @@
+.project-template-default.single-project {
+  .project {
+    &-main {
+      min-height: 100vh;
+      @include breakpoint(small only) {
+        margin-top: 3rem;
+      }
+    }
+    &-gallery {
+      margin-top: 1rem;
+      .fp-gallery {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 100px;
+        @include breakpoint(medium) {
+          grid-auto-rows: 150px;
+        }
+        &-item.cell {
+          width: 100%;
+          margin: 0;
+          overflow: hidden;
+          transition: all 0.2s ease-in-out;
+          &:hover,
+          &:focus {
+            box-shadow: rgba($primary-green, 0.5) 0px 0px 6px 1px;
+          }
+          .fp-gallery-icon {
+            width: 100%;
+            height: 100%;
+            .thumbnail {
+              border: none;
+              width: 100%;
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include breakpoint(large) {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 2rem;
+      }
+      a {
+        background-color: $primary-green;
+        color: $dark-gray;
+        padding: 0.5rem 0.8rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 0.5rem;
+      }
+    }
+  }
+}
