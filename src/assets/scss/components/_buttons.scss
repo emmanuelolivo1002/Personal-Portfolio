@@ -2,7 +2,22 @@
   background: $primary-color;
   font-size: 1.25rem;
   font-weight: bold;
-  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
   border-radius: 3px;
   border: none;
+}
+
+.big-button {
+  background-color: $primary-green;
+  color: $dark-gray;
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  transition: 0.2s ease all;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
 }

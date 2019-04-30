@@ -25,10 +25,10 @@ get_header(); ?>
 					<?php the_content();?>
 					<div class="project-links">
 						<?php if (get_field('link_to_project')) :?>
-							<a href="<?php the_field('link_to_project'); ?>" target="_blank" class="main-link"><i class="fas fa-link"></i> Link to Project</a>
+							<a href="<?php the_field('link_to_project'); ?>" target="_blank" class="big-button main-link"><i class="fas fa-link"></i> Link to Project</a>
 						<?php endif;?>
 						<?php if (get_field('link_to_github')) :?>
-							<a href="<?php the_field('link_to_github'); ?>" target="_blank" class="github-link"><i class="fab fa-github"></i> Link to Source</a>
+							<a href="<?php the_field('link_to_github'); ?>" target="_blank" class="big-button github-link"><i class="fab fa-github"></i> Link to Source</a>
 						<?php endif;?>
 					</div>
 				</div>
