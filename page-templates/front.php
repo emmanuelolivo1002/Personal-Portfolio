@@ -32,7 +32,7 @@ get_header(); ?>
 			$projects = new WP_Query( $args );
 			if( $projects->have_posts() ) :
 			?>
-				<div class="projects-grid">
+				<div class="projects-grid" data-aos="fade-up" >
 					<?php
 						while( $projects->have_posts() ) :
 							$projects->the_post();
@@ -40,7 +40,7 @@ get_header(); ?>
 							$number = get_field('number');
 							?>
 								<?php  
-									echo '<a href="'.get_permalink().'" class="project project-'.$number.'" style="background: url('.esc_url($featured_img_url).' ); background-size: cover; background-position: center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+									echo '<a href="'.get_permalink().'" class="project project-'.$number.'" style="background: url('.esc_url($featured_img_url).' ); background-size: cover; background-position: center">
 										<div class="project__content">
 											<h3 class="project__name">'.get_the_title().'</h3>
 										</div>	
