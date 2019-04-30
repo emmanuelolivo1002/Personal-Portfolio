@@ -105,20 +105,20 @@ section {
     margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 10vw;
+    grid-auto-rows: 13vw;
     grid-gap: 0.5rem;
     grid-auto-flow: dense;
     grid-template-areas:
       "P1   P1    P1    P1    P2    P2"
       "P1   P1    P1    P1    P2    P2"
       "P1   P1    P1    P1    P2    P2"
-      "P3   P3    P4    P4    P2    P2"
-      "P3   P3    P4    P4    P5    P5"
-      "P3   P3    P4    P4    P5    P5"
-      "P6   P6    P4    P4    P5    P5"
-      "P6   P6    P7    P7    P7    P7"
-      "P6   P6    P7    P7    P7    P7"
-      "P6   P6    P7    P7    P7    P7"
+      "P3   P3    P7    P7    P2    P2"
+      "P3   P3    P7    P7    P4    P4"
+      "P3   P3    P7    P7    P4    P4"
+      "P6   P6    P7    P7    P4    P4"
+      "P6   P6    P5    P5    P5    P5"
+      "P6   P6    P5    P5    P5    P5"
+      "P6   P6    P5    P5    P5    P5"
       "P8   P8    P9    P9    P10   P10"
       "P8   P8    P9    P9    P10   P10"
       "P8   P8    P9    P9    P10   P10"
@@ -132,6 +132,9 @@ section {
       "P13  P13   P14   P14   P15   P15"
       "P13  P13   P14   P14   P15   P15"
       "P13  P13   P14   P14   P15   P15";
+    @include breakpoint(medium) {
+      grid-auto-rows: 10vw;
+    }
     @include breakpoint(large) {
       grid-gap: 1rem;
       grid-template-areas:
@@ -144,36 +147,52 @@ section {
         "P10  P12   P14   P14   P15   P15"
         "P13  P13   P14   P14   P15   P15";
     }
-
+    @include breakpoint(xlarge) {
+      grid-auto-rows: 10vw;
+    }
     .project {
-      background-color: $white;
       text-align: center;
-      &:hover {
-        .project__content {
-          opacity: 1;
-        }
-        .project__name {
-          opacity: 1;
+      position: relative;
+      overflow: hidden;
+      @include breakpoint(large) {
+        &:hover {
+          .project__content {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       }
       &__content {
+        position: absolute;
+        padding: 1rem 0.5rem;
+        left: 0;
+        bottom: 0;
         width: 100%;
-        height: 100%;
+        height: auto;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
-        opacity: 0;
+        transition: 0.3s ease-in-out all;
         background: linear-gradient(
           to bottom,
-          rgba($primary-green, 0.1),
+          rgba($primary-green, 0.5),
           rgba($primary-green, 1)
         );
-        transition: 0.3s ease-in-out all;
+        @include breakpoint(large) {
+          left: 0;
+          top: 0;
+          bottom: auto;
+          transform: translateY(-100%);
+          background: $primary-green;
+          opacity: 0;
+          box-shadow: 0 2px 35px $dark-gray;
+        }
       }
       &__name {
-        color: $medium-gray;
-        transition: 0.3s ease-in-out all;
-        opacity: 0;
+        color: $black;
+        @include breakpoint(large) {
+          color: $medium-gray;
+        }
       }
       // Grid Areas
       &-1 {
