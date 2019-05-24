@@ -120,9 +120,11 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="resume-button-container">
-		<a href="/wp-content/uploads/2019/04/RESUME_FINAL.pdf" target="_blank" class="big-button" data-aos="fade-up"><i class="far fa-file-alt"></i> View Full Resume</a>
-	</div>
+	<?php if (get_field('resume')) :?>
+		<div class="resume-button-container">
+			<a href="<?php the_field('resume'); ?>" target="_blank" class="big-button" data-aos="fade-up"><i class="far fa-file-alt"></i> View Full Resume</a>
+		</div>
+	<?php endif ?>
 </section>
 
 <section id="about" class="about">
