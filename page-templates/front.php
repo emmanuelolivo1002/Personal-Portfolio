@@ -14,7 +14,7 @@ get_header(); ?>
 				<a href="#projects" class="scroll" data-smooth-scroll>Scroll Down <span class="arrow"><i class="fas fa-long-arrow-alt-down"></i></span></a>
 			</div>
 			<div class="cell small-12 large-6 small-order-1 large-order-2 right-content">
-				<img src="/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/hero.jpg" alt="Emmanuel Olivo | Full Stack Web Developer" class="front-hero-img grayscale-img" data-aos="hero-image-animation">
+				<img src="/wp-content/themes/EmmanuelOlivoPortfolio/dist/assets/images/hero.jpg" alt="Emmanuel Olivo | Full Stack Web Developer" class="front-hero-img grayscale-img" >
 			</div>
 		</div>
 	</div>

@@ -56,6 +56,7 @@ section {
   .front-hero-img {
     width: auto;
     object-fit: cover;
+    object-position: top;
     width: 100%;
     max-height: 50vh;
     @include breakpoint(medium) {
